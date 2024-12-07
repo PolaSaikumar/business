@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooking Items Selection</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      margin-left: 10px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .form-item label {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .form-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .form-item input[type="number"] {
+      width: 70px;
+      margin-right: 10px;
+      padding: 5px;
+    }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+ @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+        margin: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .form-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .form-item label {
+        flex: 1 1 100%;
+        margin-bottom: 5px;
+      }
+
+      .form-item input[type="number"] {
+        flex: 1 1 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .submit-btn {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .submit-btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>SaiRam Masala Items</h1>
+<form id="itemsForm">
+<label for="name">Name shop Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter your Shop name">
+<br></br>
+<label for="name">Place:</label>
+<input type="text" id="name" name="name" placeholder="place of Your Shop">
+<br></br>
+    
+      <!-- Soda -->
+      <div class="form-group form-item">
+        <label>
+		<label><input type="checkbox" name="items" value="Soda"> Soda</label>
+        </label>
+        <input type="number" name="quantity_Soda" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Soda" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Lavanga -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Lavanga"> Lavanga </label>
+        </label>
+        <input type="number" name="quantity_Lavanga" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Lavanga" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Dhaniya -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Dhaniya"> Dhaniya </label>
+        </label>
+        <input type="number" name="quantity_Dhaniya" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Dhaniya" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Kobari -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Kobari"> Kobari </label>
+        </label>
+        <input type="number" name="quantity_Kobari" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Kobari" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Albukar -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Albukar"> Albukar </label>
+        </label>
+        <input type="number" name="quantity_Albukar" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Albukar" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Dry Fruits -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Dry Fruits"> Dry Fruits </label>
+        </label>
+        <input type="number" name="quantity_Dry Fruits" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Dry Fruits" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Masala -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Masala"> Masala </label>
+        </label>
+        <input type="number" name="quantity_Masala" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Masala" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Jera -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Jera"> Jera </label>
+        </label>
+        <input type="number" name="quantity_Jera" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Jera" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Menthulu -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Menthulu"> Menthulu </label>
+        </label>
+        <input type="number" name="quantity_Menthulu" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Menthulu" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- 10gm Masal -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="10gm Masala"> 10gm Masala </label>
+        </label>
+        <input type="number" name="quantity_10gm Masal" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_10gm Masal" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Miriyalu -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Miriyalu"> Miriyalu </label>
+        </label>
+        <input type="number" name="quantity_Miriyalu" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Miriyalu" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Pokalu -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Pokalu"> Pokalu </label>
+        </label>
+        <input type="number" name="quantity_Pokalu" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Pokalu" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Safety Pins -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Safety Pins"> Safety Pins </label>
+        </label>
+        <input type="number" name="quantity_Safety Pins" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Safety Pins" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Nails -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Nails"> Nails </label>
+        </label>
+        <input type="number" name="quantity_Nails" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Nails" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Rubber Bands -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Rubber Bands"> Rubber Bands </label>
+        </label>
+        <input type="number" name="quantity_Rubber Bands" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Rubber Bands" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Aavalu -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Aavalu"> Aavalu </label>
+        </label>
+        <input type="number" name="quantity_Aavalu" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Aavalu" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Kasu -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Kasu"> Kasu </label>
+        </label>
+        <input type="number" name="quantity_Kasu" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Kasu" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Sonti -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Sonti"> Sonti </label>
+        </label>
+        <input type="number" name="quantity_Sonti" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Sonti" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Elaichi -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Elaichi"> Elaichi </label>
+        </label>
+        <input type="number" name="quantity_Elaichi" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Elaichi" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Biriyani Aku -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Biriyani Aku"> Biriyani Aku</label>
+        </label>
+        <input type="number" name="quantity_Biriyani Aku" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Biriyani Aku" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+      <!-- Chapala Masala -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Chapala Masala"> Chapala Masala</label>
+        </label>
+        <input type="number" name="quantity_Chapala Masala" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Chapala Masala" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+ <!-- Gasalu -->
+      <div class="form-group form-item">
+        <label>
+        <label><input type="checkbox" name="items" value="Gasalu"> Gasalu </label>
+        </label>
+        <input type="number" name="quantity_Gasalu" placeholder="Quantity" min="1" step="1" max="100">
+        <input type="number" name="price_Gasalu" placeholder="Price" min="2" step="1" max="20">
+      </div>
+
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Initialize EmailJS with your public key
+    emailjs.init("StHPJN5RHK9H_bRsX"); // Replace with your EmailJS public key
+
+    document.getElementById("itemsForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Collect shop details
+  const shopName = document.getElementById("name").value || "N/A";
+  const place = document.getElementsByName("name")[1].value || "N/A"; // Ensure you're fetching the correct "Place" field value.
+
+  // Collect selected items
+  const formData = new FormData(this);
+  const selectedItems = formData.getAll("items");
+  const details = selectedItems.map((item) => {
+    const quantity = formData.get(`quantity_${item.replace(" ", "_")}`) || 0;
+    const price = formData.get(`price_${item.replace(" ", "_")}`) || 0;
+    return `${item}: Quantity=${quantity}, Price=${price}`;
+  });
+
+  if (selectedItems.length === 0) {
+    alert("Please select at least one item.");
+    return;
+  }
+
+  // Prepare email parameters
+  const templateParams = {
+    to_email: "saikumar.pola999@gmail.com", // Replace with the recipient email
+    shop_name: shopName, // Include shop name
+    shop_place: place, // Include shop place
+    selected_items: details.join("\n"),
+  };
+
+  // Send the email using EmailJS
+  emailjs
+    .send("service_4686", "template_4686", templateParams)
+    .then(
+      (response) => {
+        alert("Your selected items and shop details have been sent to the email!");
+        console.log("Email sent successfully:", response.status, response.text);
+      },
+      (error) => {
+        alert("Failed to send the email.");
+        console.error("EmailJS error:", error);
+      }
+    );
+});
+
+  </script>
+</body>
+</html>
